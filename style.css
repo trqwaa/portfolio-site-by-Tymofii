@@ -1,0 +1,80 @@
+header {
+    position: fixed; 
+    background-color: #1F1F1F;
+    top: 0;
+    left: 0 ;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    padding: 0 20px;
+    box-shadow: 30px 60px 80px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    gap: 30px;
+}
+header button {
+    background-color: transparent;
+    border: #1c1c1c;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 20px 30px;
+    border-radius: 7px;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+header button:hover {
+    background-color: #3a3a3a;
+    color: #1F1F1F;
+    color: white;
+}
+main {
+    margin-top: 60px;
+    display: block;
+}
+main .ZGOLOVOK {
+    color: #000000;
+    text-align: center;
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
+}
+
+.Conteiner {
+
+    background-color: #1c1c1c;
+    padding: 100px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 1000px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.profile-photo {
+    width: 350px;
+    border-radius: 170px;
+    margin-bottom: 20px;
+}
+.Conteiner h1 {
+    color : #ffffff;
+    margin-bottom: 15px;
+    font-family: "Roboto", sans-serif;
+}
+.Conteiner p {
+    font-size: 25px;
+    line-height: 2;
+    color: #ffffff;
+    margin-bottom: 100px;
+    font-family: "Roboto", sans-serif;
+}
+
+
+
