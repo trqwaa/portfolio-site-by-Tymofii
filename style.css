@@ -4,43 +4,51 @@ header {
     top: 0;
     left: 0 ;
     width: 100%;
-    height: 70px;
+    height: 60px;
     align-items: center;
     display: flex;
-    padding: 0 20px;
-    box-shadow: 30px 60px 80px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    gap: 30px;
+    padding: 0 30px;
+    box-shadow: 0px 100px 200px rgba(0, 0, 0, 0.1);
+    z-index: 1000px;
+    gap: 100px;
+    
 }
 header button {
     background-color: transparent;
     border: #1c1c1c;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
-    padding: 20px 30px;
+    padding: 15px 30px 15px 30px;
     border-radius: 7px;
     transition: background-color 0.3s, color 0.3s;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    margin-right: 15px;
+    font-weight: 600;
+    margin-right: 10px;
 }
-
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 header button:hover {
     background-color: #3a3a3a;
     color: #1F1F1F;
     color: white;
 }
-main {
-    margin-top: 60px;
+main {  
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin-top: 150px;
     display: block;
 }
 main .ZGOLOVOK {
-    color: #000000;
+    color: #ffffff;
     text-align: center;
-    font-size: 48px;
-    margin-top: 0;
-    margin-bottom: 30px;
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
 }
 main {
     display: flex;
@@ -50,9 +58,9 @@ main {
 }
 
 .Conteiner {
-
+    top : 50%;
     background-color: #1c1c1c;
-    padding: 100px;
+    padding: 48px;
     border-radius: 30px;
     text-align: center;
     max-width: 1000px;
@@ -63,18 +71,58 @@ main {
     border-radius: 170px;
     margin-bottom: 20px;
 }
-.Conteiner h1 {
-    color : #ffffff;
-    margin-bottom: 15px;
-    font-family: "Roboto", sans-serif;
-}
+
 .Conteiner p {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 2;
     color: #ffffff;
     margin-bottom: 100px;
     font-family: "Roboto", sans-serif;
 }
 
+.skills {
+    font-family: "Roboto", sans-serif;
+    background-color: #ffffff;
+    margin-top: 30px;
+    color: #000000;
+    width: 100%;
+    max-width: 1039px; 
+    border-radius: 30px;
+    padding: 5px 30px;
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+.skills h2 {
+  text-align: center;
+  margin-bottom: 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  
+}
+.skill {
+  margin-bottom: 20px;
+}
 
+.skill p {
+  font-size: 25px;
+  margin: 28px 10px 5px 0px;
+  font-weight: bold;
+}
 
+.skill-bar {
+  background: #868686;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 18px;
+  
+}
+
+.skill-level {
+  height: 100%;
+  background: linear-gradient(90deg, #000000, #414141);
+  border-radius: 10px;
+  transition: width 1s ease;
+}
