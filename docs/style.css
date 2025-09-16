@@ -1,3 +1,51 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* АДАПТАЦИЯ
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .proects {
+    width: 90%;     
+    margin: 10px auto;
+    padding: 15px;
+  }
+    .about-me {
+        width: 90%;     
+        margin: 10px auto;
+        padding: 15px;
+    }
+    .skills {
+        width: 90%;     
+        margin: 10px auto;
+        padding: 15px;
+    }
+  body {
+    font-size: 16px; 
+  }
+
+  h2, h3 {
+    text-align: center;
+  }
+}
+
+*/
+
+
+
+
+
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -25,12 +73,11 @@ header {
     z-index: 1000px;
     gap: 100px;
     
-    
-    
 }
-header button {
+header a {
+    text-decoration: none;
     background-color: transparent;
-    border: #1c1c1c;
+    border: #1F1F1F;
     color: white;
     font-size: 20px;
     cursor: pointer;
@@ -42,13 +89,24 @@ header button {
     margin-right: 10px;
     
 }
+
+
+header a:hover {
+    background-color: #3f3f3f;
+    color: #fff;
+    text-decoration: none;
+    
+}
+
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-header button:hover {
-    background-color: #3f3f3f;
-    color: #1F1F1F;
-    color: white;
+
+    
+.about {
+     scroll-margin-top: 50vh;
 }
+
+
 main {  
     display: flex;
     flex-direction: column; 
@@ -57,6 +115,8 @@ main {
     min-height: 80vh;
     margin-top: 150px;
     display: block;
+
+    
 }
 main .ZGOLOVOK {
     color: #ffffff;
@@ -65,7 +125,11 @@ main .ZGOLOVOK {
     margin-top: 20px;
     margin-bottom: 20px;
     font-family: "Roboto", sans-serif;
+    outline: none;
 }
+
+
+
 main {
     display: flex;
     justify-content: center;
@@ -75,13 +139,13 @@ main {
 
 .Conteiner {
     top : 50%;
-    background-color: #1c1c1c;
+    background-color: #1F1F1F;
     padding: 48px;
     border-radius: 30px;
     text-align: center;
     max-width: 1000px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    border: 5px solid #1c1c1c;
+    border: 5px solid #1F1F1F;
 }
 .profile-photo {
     width: 350px;
@@ -90,7 +154,7 @@ main {
 }
 
 .Conteiner p {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 2;
     color: #ffffff;
     margin-bottom: 100px;
@@ -99,10 +163,45 @@ main {
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+
+.about-me {
+    font-family: "Roboto", sans-serif;
+    background-color: #1F1F1F;
+    margin-top: 50px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 1000px; 
+    border-radius: 30px;
+    padding: 48px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #1F1F1F;
+    padding: 48px; 
+    scroll-margin-top: 30vh;
+}
+.about-me p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;   
+    
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
 .skills {
     font-family: "Roboto", sans-serif;
     background-color: #ffffff;
-    margin-top: 30px;
+    margin-top: 50px;
     color: #1F1F1F;
     width: 100%;
     max-width: 1039px; 
@@ -112,7 +211,9 @@ main {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    border: 5px solid #000000;
+    border: 5px solid #1c1c1c;
+    padding-bottom: 50px;
+    
 }
 .skills h2 {
   text-align: center;
@@ -120,10 +221,12 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 45px;
+  scroll-margin-top: 35vh;
   
 }
 .skill {
   margin-bottom: 20px;
+  
 }
 
 .skill p {
@@ -145,15 +248,17 @@ main {
   background: linear-gradient(90deg, #1F1F1F, #383838);
   border-radius: 10px;
   transition: width 1s ease;
+  
 }
+
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .proects {
     font-family: "Roboto", sans-serif;
     background-color: #ffffff;
-    margin-top: 30px;
-    color: #000000;
+    margin-top: 50px;
+    color: #1F1F1F;
     width: 100%;
     max-width: 1039px; 
     border-radius: 30px;
@@ -163,7 +268,9 @@ main {
     margin-left: auto;
     margin-right: auto;
     border: 5px solid #1c1c1c;
+    min-height: 20vh;
     
+    padding-bottom: 60px;
 }
 
 .proect1 {
@@ -175,7 +282,7 @@ main {
     font-family: "Roboto", sans-serif;
     background-color: #1F1F1F;
     margin-top: 30px;
-    color: #000000;
+    color: #1F1F1F;
     width: 100%;
     max-width: 950px; 
     border-radius: 30px;
@@ -184,6 +291,7 @@ main {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
+    
 }
 .proect1 a {
     display: block; 
@@ -199,12 +307,61 @@ main {
     
 }
 
+.proect2 {
+    display: block; 
+    text-decoration: none; 
+    color: inherit; 
+    transform: scale(1);
+    transition: transform 0.3s;
+    font-family: "Roboto", sans-serif;
+    background-color: #1F1F1F;
+    margin-top: 30px;
+    color: #1F1F1F;
+    width: 100%;
+    max-width: 950px; 
+    border-radius: 30px;
+    padding: 5px 30px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.proect2 a {
+    display: block; 
+    text-decoration: none; 
+    color: inherit; 
+    
+}
+
+.proect2:hover {
+    transform: scale(1.01) translateY(-5px); 
+    transition: transform 0.3s;
+    font-family: "Roboto", sans-serif;
+     box-shadow: 0 12px 50px rgba(85, 85, 85, 0.3);
+    
+}
+
+.proect2 p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 24px;   
+    font-weight: bold;
+}
+
+
 .proects h2 {
   text-align: center;
   margin-bottom: 0px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 45px;
+  scroll-margin-top: 20vh;
 }
 
 .proect1 p {
@@ -219,3 +376,46 @@ main {
 }
 
 
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+.personal {
+    font-family: "Roboto", sans-serif;
+    background-color: #ffffff;
+    margin-top: 50px;
+    color: #1F1F1F;
+    width: 100%;
+    max-width: 1039px; 
+    border-radius: 30px;
+    padding: 5px 30px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #1F1F1F;
+}
+
+.personal h2 {
+  text-align: center;
+  margin-bottom: 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  
+}
+.personal ul {
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-size: 25px;
+     margin: 28px 10px 5px 0px;
+    font-weight: bold;
+}

@@ -8,32 +8,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
-    <header>
-        <nav class="nav">
-            <button>Home</button>
-            <button>Persönliches</button>
-            <button>Skils</button>
-            <button>Projekte</button> 
-             <button>Echt?!</button>
-            <button>Kontakt</button>  
+    <header >
+        <nav class="nav" >
+            <a href="#Home">Home</a>
+            <a href="#Personliches">Persönliches</a>
+            <a href="#skills">Skills</a>
+            <a href="#Projekte">Mein Schaffensraum</a> 
+             <a href="#Echt?!">Echt?!</a>
+            <a href="">Kontakt</a>  
         </nav>
 
     </header>
     <main>
-        <section class="about">        
+        <section class="about" id="Home">        
             <div class="Conteiner">
             <img src="img/224880014.jfif" alt="My Photo" width="300" class="profile-photo">
-            <h1 class="ZGOLOVOK">HALLO</h1>
+            <h1 class="ZGOLOVOK" >HALLO</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla itaque impedit quo debitis excepturi aliquid veniam odit perspiciatis dolores possimus odio quasi, sunt doloremque quos? Ipsam laboriosam tenetur dolorum unde. </p>
             </div>
         </section>
-
+        <section class="about-me" id="Personliches">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laboriosam iure eius eos ea, quam quas nostrum obcaecati ut dolorum optio consequuntur dolore natus, voluptatem eveniet perspiciatis nihil veniam aspernatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis illo culpa dignissimos impedit ipsam explicabo quos itaque. Blanditiis porro iusto modi vero nemo placeat dolor. Deleniti deserunt enim excepturi asperiores?
+                
+            </p>
+        </section>
         <section class="skills">
-            <h2>Skills</h2>
+            <h2 id="skills">Skills</h2>
             <div class="skill">
                 <p>Python</p>
                 <div class="skill-bar">
@@ -51,16 +56,35 @@
                 <div class="skill-bar">
                     <div class="skill-level" style="width: 75%;"></div>
                 </div>
+
+                
+
         </section>
         <section class="proects">
-            <h2>Mein Schaffensraum</h2>
+            <h2 id="Projekte">Mein Schaffensraum</h2>
             <section class="proect1">
-                 <a href="https://trqwaa.github.io/iTStep-2020/" target="_blank">
+                <a href="https://trqwaa.github.io/iTStep-2020/" target="_blank">
                     <p>iTStep-2020</p>
-                 </a>
+                </a>
             </section>
+            <section class="proect2">
+                <a href="https://github.com/trqwaa" target="_blank">
+                    <p>GitHub</p>
+                </a>
+            </section>
+            
         </section>
 
+
+        <section class="personal">
+            <h2 id="Echt?!">Echt?!</h2>
+            <ul style="list-style-type: square;"> 
+                <li><strong>Name:</strong> </li>
+                <li><strong>Alter:</strong> </li>
+                <li><strong>Wohnort:</strong> </li>
+                <li><strong>Beruf:</strong> </li>
+            </ul>
+        </section>
     </main>
     
     <footer>
