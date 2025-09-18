@@ -212,7 +212,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     border: 5px solid #1c1c1c;
-    padding-bottom: 50px;
+    padding-bottom: 45px;
     
 }
 .skills h2 {
@@ -221,7 +221,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 45px;
-  scroll-margin-top: 35vh;
+  scroll-margin-top: 30vh;
   
 }
 .skill {
@@ -361,7 +361,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 45px;
-  scroll-margin-top: 20vh;
+  scroll-margin-top: 36vh;
 }
 
 .proect1 p {
@@ -413,9 +413,14 @@ main {
 .personal ul {
     font-family: "Roboto", sans-serif;
     padding: 10px;
-    font-size: 20px;
     line-height: 1.5;
-    font-size: 25px;
-     margin: 28px 10px 5px 0px;
+    font-size: 27px;
+    margin: 28px 10px 5px 0px;
     font-weight: bold;
+    
+}
+
+.personal li {
+    margin-bottom: 25px;
+    
 }
