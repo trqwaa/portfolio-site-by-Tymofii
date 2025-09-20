@@ -1,6 +1,7 @@
 
 
-
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ===== Бургер меню ===== */
 .burger {
   display: none;
@@ -26,23 +27,28 @@
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 0; /* <-- теперь меню справа */
+    right: 0;           /* меню справа */
     width: 70%;
-    max-width: 250px;
+    max-width: 260px;
     background-color: #1F1F1F;
-    padding: 20px 10px;
+    padding: 18px 12px;
     border-radius: 0 0 0 20px;
     transform: translateX(100%);
     opacity: 0;
     pointer-events: none;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
+    transition: transform 0.35s cubic-bezier(.2,.9,.3,1), opacity 0.25s ease;
+  /* ТЕНЬ: смещается влево (от меню) и размазывается */
+    box-shadow: -14px 6px 40px rgba(0,0,0,0.45);
+  /* для лёгкого "стеклянного" эффекта (если поддерживается) */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
 
   body.menu-open .nav {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
-  }
+  } 
 
    .nav a {
    display: block;
@@ -562,6 +568,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     border: 5px solid #1F1F1F;
+    
 }
 
 .personal h2 {
@@ -570,7 +577,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 45px;
-  
+  scroll-margin-top: 30vh;
 }
 .personal ul {
     font-family: "Roboto", sans-serif;
@@ -588,4 +595,230 @@ main {
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////й///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.divider {
+  border: none;
+  height: 5px;         /* толще, чем 3px */
+  background: #1F1F1F;
+  border-radius: 3px;  /* скругление, чтобы не было «кирпичом» */
+  margin: 80px auto;
+  width: 80%;
+  max-width: 1000px;
+}
+
+
+
+/* ================= Kontakt ================= */
+
+/* Заголовок */
+.konh2 {
+  margin: -20px 0 0;
+  text-align: center;
+  font: 700 45px "Roboto", sans-serif;
+  color: #1F1F1F;
+  scroll-margin-top: 30vh;
+}
+
+/* Контейнер */
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 60px auto;
+  overflow-x: auto;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  transform: scale(1.1); /* больше масштаб */
+}
+
+/* Общие стили блоков */
+.contact-block {
+  flex: 1 1 48%;
+  min-width: 320px;
+  border-radius: 30px;
+  padding: 35px;
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Левый блок */
+.form-block {
+  background: #fff;
+  border: 5px solid #1F1F1F;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font: 18px "Roboto", sans-serif;
+  resize: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #1F1F1F;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+.contact-btn {
+  background: #1F1F1F;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font: bold 18px "Roboto", sans-serif;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+.contact-btn:hover {
+  background: #3f3f3f;
+  transform: translateY(-2px);
+}
+
+/* Правый блок */
+.links-block {
+  background: #1F1F1F;
+  border: 5px solid #1F1F1F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 35px; /* ещё больше расстояние между кнопками */
+  padding: 20px 30px;
+}
+.links-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  color: #1F1F1F;
+  padding: 16px 22px;
+  border-radius: 12px;
+  font: bold 18px "Roboto", sans-serif;
+  text-decoration: none;
+  transition: 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 10px rgba(255,255,255,.4);
+}
+.links-btn:hover {
+  background: #eaeaea;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255,255,255,.6);
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+    transform: scale(1); /* убираем масштаб на мобилках */
+  }
+  .contact-block {
+    flex: 1 1 100%;
+  }
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+footer {
+    background-color: #1F1F1F;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ================= Компактная адаптация блоков ================= */
+@media (max-width:768px){
+  .Conteiner, .about-me, .skills, .proects, .personal {
+    padding:20px;
+    max-width:95%;
+    margin-top:20px; /* меньше пустого пространства */
+    border-radius:15px;
+  }
+  .Conteiner p, .about-me p {font-size:16px;line-height:1.6;margin-bottom:20px}
+  .profile-photo{width:160px;margin-bottom:15px}
+  h1.ZGOLOVOK{font-size:28px;margin-bottom:15px}
+  .skills h2, .proects h2, .personal h2{font-size:28px;margin-bottom:15px}
+  .skill p{font-size:18px}
+  .skill-bar{height:14px}
+  .proect1, .proect2{padding:12px;border-radius:15px;margin-top:15px}
+  .proect1 p, .proect2 p{font-size:16px;line-height:1.4;text-align:center}
+  .personal ul{font-size:16px;line-height:1.5}
+  .personal li{margin-bottom:10px}
+}
+
+@media (max-width:480px){
+  .Conteiner, .about-me, .skills, .proects, .personal {
+    padding:15px;
+    max-width:95%;
+    margin-top:15px;
+    border-radius:12px;
+  }
+  .Conteiner p, .about-me p {font-size:14px;line-height:1.4;margin-bottom:15px}
+  .profile-photo{width:120px;margin-bottom:10px}
+  h1.ZGOLOVOK{font-size:24px;margin-bottom:10px}
+  .skills h2, .proects h2, .personal h2{font-size:24px;margin-bottom:10px}
+  .skill p{font-size:16px}
+  .skill-bar{height:12px}
+  .proect1, .proect2{padding:10px;border-radius:12px;margin-top:12px}
+  .proect1 p, .proect2 p{font-size:14px;line-height:1.3;text-align:center}
+  .personal ul{font-size:14px;line-height:1.4}
+  .personal li{margin-bottom:8px}
+
+  
+}
+/* ================= Исправление верхнего блока и отступа main ================= */
+/* ===== Адаптация верхнего блока и main ===== */
+@media (max-width:768px){
+  main{margin-top:80px;display:flex;flex-direction:column;align-items:center;}
+  .Conteiner,.about-me,.skills,.proects,.personal{margin-top:20px;padding:20px;max-width:95%;border-radius:15px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.2);}
+  .profile-photo{display:block;margin:0 auto 15px auto;width:160px;border-radius:50%;}
+  h1.ZGOLOVOK{font-size:28px;margin-bottom:15px;text-align:center;}
+  .Conteiner p,.about-me p{font-size:16px;line-height:1.6;margin-bottom:20px;}
+  .skills h2,.proects h2,.personal h2{font-size:28px;margin-bottom:15px;}
+  .skill p{font-size:18px;}
+  .skill-bar{height:14px;}
+  .proect1,.proect2{padding:12px;border-radius:15px;margin-top:15px;}
+  .proect1 p,.proect2 p{font-size:16px;line-height:1.4;text-align:center;}
+  .personal ul{font-size:16px;line-height:1.5;}
+  .personal li{margin-bottom:10px;}
+}
+@media (max-width:480px){
+  .Conteiner,.about-me,.skills,.proects,.personal{padding:15px;margin-top:15px;border-radius:12px;}
+  .profile-photo{width:120px;}
+  h1.ZGOLOVOK{font-size:24px;}
+  .Conteiner p,.about-me p{font-size:14px;line-height:1.4;margin-bottom:15px;}
+  .skills h2,.proects h2,.personal h2{font-size:24px;margin-bottom:10px;}
+  .skill p{font-size:16px;}
+  .skill-bar{height:12px;}
+  .proect1,.proect2{padding:10px;border-radius:12px;margin-top:12px;}
+  .proect1 p,.proect2 p{font-size:14px;line-height:1.3;}
+  .personal ul{font-size:14px;line-height:1.4;}
+  .personal li{margin-bottom:8px;}
+}
+
+@media(max-width:768px){
+  main{margin-top:60px;display:flex;flex-direction:column;align-items:center}
+  .Conteiner{margin:0 auto 20px;padding:20px;max-width:95%;border-radius:15px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.2)}
+  .profile-photo{display:block;margin:0 auto 15px;width:160px;border-radius:50%}
+  h1.ZGOLOVOK{font-size:28px;margin-bottom:15px;text-align:center}
+}
+@media(max-width:480px){
+  main{margin-top:50px}
+  .profile-photo{width:120px}
+  h1.ZGOLOVOK{font-size:24px}
+  .Conteiner{padding:15px;margin-bottom:15px}
+}
